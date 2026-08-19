@@ -282,40 +282,66 @@
 }
 
 
-        /* ==============================
+       /* ==============================
            SKILLS
         ============================== */
+        
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 18px;
-        }
+.skills {
+    background: #f8fafc;
+}
 
-        .skill-card {
-            background: white;
-            padding: 25px;
-            text-align: center;
-            border-radius: 10px;
-            border: 1px solid #e5e7eb;
-            transition: 0.3s;
-        }
+.skills-category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 950px;
+    margin: auto;
+}
 
-        .skill-card:hover {
-            transform: translateY(-5px);
-            border-color: #2563eb;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-        }
+.skills-category {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 25px;
+    transition: 0.3s;
+}
 
-        .skill-card h3 {
-            color: #111827;
-            margin-bottom: 5px;
-        }
+.skills-category:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+    border-color: #2563eb;
+}
 
-        .skill-card p {
-            color: #6b7280;
-            font-size: 14px;
-        }
+.skills-category h3 {
+    color: #111827;
+    font-size: 19px;
+    margin-bottom: 18px;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-list span {
+    background: #eff6ff;
+    color: #2563eb;
+    border: 1px solid #dbeafe;
+    padding: 8px 13px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+@media (max-width: 700px) {
+
+    .skills-category-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
 
 
         /* ==============================
@@ -680,184 +706,105 @@
 </section>
 
     <!-- ==============================
-         SKILLS
+     SKILLS
     ============================== -->
 
-    <section id="skills">
+<section id="skills" class="skills">
 
-        <div class="container">
+    <div class="container">
 
-            <div class="section-title">
+        <div class="section-title">
 
-                <h2>Technical Skills</h2>
+            <h2>Technical Skills</h2>
 
-                <p>
-                    Tools and technologies I use for data analysis.
-                </p>
+            <p>
+                Tools and technologies I use for data analysis and
+                business intelligence.
+            </p>
+
+        </div>
+
+        <div class="skills-category-grid">
+
+            <!-- Data Analytics -->
+
+            <div class="skills-category">
+
+                <h3>Data Analytics</h3>
+
+                <div class="skill-list">
+
+                    <span>SQL</span>
+                    <span>Excel</span>
+                    <span>Statistics</span>
+                    <span>Data Cleaning</span>
+                    <span>EDA</span>
+
+                </div>
 
             </div>
 
-            <div class="skills-grid">
 
-                <div class="skill-card">
-                    <h3>SQL</h3>
-                    <p>MySQL, Joins, CTEs, Window Functions</p>
+            <!-- Programming -->
+
+            <div class="skills-category">
+
+                <h3>Programming & Libraries</h3>
+
+                <div class="skill-list">
+
+                    <span>Python</span>
+                    <span>Pandas</span>
+                    <span>NumPy</span>
+                    <span>Matplotlib</span>
+                    <span>Seaborn</span>
+
                 </div>
 
-                <div class="skill-card">
-                    <h3>Excel</h3>
-                    <p>PivotTables, Data Cleaning, Analysis</p>
+            </div>
+
+
+            <!-- Visualization -->
+
+            <div class="skills-category">
+
+                <h3>Data Visualization</h3>
+
+                <div class="skill-list">
+
+                    <span>Power BI</span>
+                    <span>Tableau</span>
+                    <span>Excel Dashboards</span>
+                    <span>Power Query</span>
+
                 </div>
 
-                <div class="skill-card">
-                    <h3>Power BI</h3>
-                    <p>Dashboards, KPIs, Data Visualization</p>
-                </div>
+            </div>
 
-                <div class="skill-card">
-                    <h3>Python</h3>
-                    <p>Pandas, NumPy, Matplotlib, Seaborn</p>
-                </div>
 
-                <div class="skill-card">
-                    <h3>Tableau</h3>
-                    <p>Data Visualization & Dashboards</p>
-                </div>
+            <!-- Tools -->
 
-                <div class="skill-card">
-                    <h3>Statistics</h3>
-                    <p>Descriptive Statistics & Data Analysis</p>
-                </div>
+            <div class="skills-category">
 
-                <div class="skill-card">
-                    <h3>Git & GitHub</h3>
-                    <p>Version Control & Project Management</p>
-                </div>
+                <h3>Tools & Platforms</h3>
 
-                <div class="skill-card">
-                    <h3>Data Cleaning</h3>
-                    <p>Missing Values, Duplicates & Transformation</p>
+                <div class="skill-list">
+
+                    <span>MySQL</span>
+                    <span>Git</span>
+                    <span>GitHub</span>
+                    <span>Jupyter Notebook</span>
+                    <span>VS Code</span>
+
                 </div>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
 
-
-    <!-- ==============================
-         PROJECTS
-    ============================== -->
-
-    <section id="projects">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <h2>Featured Projects</h2>
-
-                <p>
-                    Selected Data Analytics projects.
-                </p>
-
-            </div>
-
-            <div class="projects-grid">
-
-
-                <!-- PROJECT 1 -->
-
-                <div class="project-card">
-
-                    <h3>
-                        End-to-End Sales Analytics
-                    </h3>
-
-                    <div class="tools">
-                        Excel | SQL | Power BI
-                    </div>
-
-                    <p>
-                        Analyzed transactional sales data using Excel and SQL,
-                        performed data cleaning and transformation, and created
-                        an interactive Power BI dashboard to track sales,
-                        orders, products, customers, and regional performance.
-                    </p>
-
-                    <a href="https://github.com/amanullah-ds"
-                       target="_blank"
-                       class="project-link">
-                        View on GitHub →
-                    </a>
-
-                </div>
-
-
-                <!-- PROJECT 2 -->
-
-                <div class="project-card">
-
-                    <h3>
-                        HR Employee Attrition Analysis
-                    </h3>
-
-                    <div class="tools">
-                        SQL | Power BI
-                    </div>
-
-                    <p>
-                        Analyzed employee data to identify attrition patterns
-                        across departments, job roles, experience levels,
-                        and salary categories. Built a Power BI dashboard
-                        for HR performance analysis.
-                    </p>
-
-                    <a href="https://github.com/amanullah-ds"
-                       target="_blank"
-                       class="project-link">
-                        View on GitHub →
-                    </a>
-
-                </div>
-
-
-                <!-- PROJECT 3 -->
-
-                <div class="project-card">
-
-                    <h3>
-                        Revenue & Sales Funnel Analysis
-                    </h3>
-
-                    <div class="tools">
-                        SQL | Power BI
-                    </div>
-
-                    <p>
-                        Analyzed the customer journey from website visits
-                        to completed purchases. Used SQL to calculate
-                        revenue, conversion rates, and customer drop-offs
-                        and visualized the results using Power BI.
-                    </p>
-
-                    <a href="https://github.com/amanullah-ds"
-                       target="_blank"
-                       class="project-link">
-                        View on GitHub →
-                    </a>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
+</section>
     <!-- ==============================
          EXPERIENCE
     ============================== -->

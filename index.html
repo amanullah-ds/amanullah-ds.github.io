@@ -86,72 +86,112 @@
         }
 
         /* ==============================
-           HERO
-        ============================== */
+   HERO
+============================== */
 
-        .hero {
-            min-height: 88vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, #eff6ff, #ffffff);
-        }
+.hero {
+    min-height: 82vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #eff6ff 0%, #ffffff 60%, #f8fafc 100%);
+}
 
-        .hero-content {
-            max-width: 800px;
-        }
+.hero-content {
+    max-width: 850px;
+    padding: 40px 0;
+}
 
-        .hero h1 {
-            font-size: 55px;
-            color: #111827;
-            margin-bottom: 10px;
-        }
+.hero-tag {
+    display: inline-block;
+    background: #dbeafe;
+    color: #2563eb;
+    padding: 7px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
 
-        .hero h2 {
-            font-size: 28px;
-            color: #2563eb;
-            margin-bottom: 20px;
-        }
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.1;
+    color: #111827;
+    margin-bottom: 10px;
+}
 
-        .hero p {
-            font-size: 18px;
-            color: #4b5563;
-            max-width: 700px;
-            margin-bottom: 30px;
-        }
+.hero h2 {
+    font-size: 30px;
+    color: #2563eb;
+    margin-bottom: 12px;
+}
 
-        .buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
+.hero-subtitle {
+    font-size: 22px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 15px;
+}
 
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+.hero p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #6b7280;
+    max-width: 720px;
+    margin-bottom: 28px;
+}
 
-        .btn-primary {
-            background: #2563eb;
-            color: white;
-        }
+.hero-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 28px;
+}
 
-        .btn-primary:hover {
-            background: #1d4ed8;
-        }
+.hero-highlights span {
+    background: #ffffff;
+    border: 1px solid #dbe3ef;
+    color: #374151;
+    padding: 7px 13px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
 
-        .btn-secondary {
-            border: 2px solid #2563eb;
-            color: #2563eb;
-            background: white;
-        }
+.buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
 
-        .btn-secondary:hover {
-            background: #2563eb;
-            color: white;
-        }
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 1px solid #2563eb;
+    color: #2563eb;
+    background: white;
+}
+
+.btn-secondary:hover {
+    background: #2563eb;
+    color: white;
+    transform: translateY(-2px);
+}
 
         /* ==============================
            SECTIONS
@@ -359,42 +399,41 @@
 
         @media (max-width: 700px) {
 
-            .nav-container {
-                flex-direction: column;
-                gap: 12px;
-            }
+    .nav-container {
+        flex-direction: column;
+        gap: 12px;
+    }
 
-            .nav-links {
-                gap: 12px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
+    .nav-links {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-            .hero {
-                min-height: 80vh;
-            }
+    .hero {
+        min-height: 80vh;
+    }
 
-            .hero h1 {
-                font-size: 40px;
-            }
+    .hero h1 {
+        font-size: 42px;
+    }
 
-            .hero h2 {
-                font-size: 23px;
-            }
+    .hero h2 {
+        font-size: 24px;
+    }
 
-            .hero p {
-                font-size: 16px;
-            }
+    .hero-subtitle {
+        font-size: 19px;
+    }
 
-            section {
-                padding: 60px 0;
-            }
-        }
+    .hero p {
+        font-size: 16px;
+    }
 
-    </style>
-</head>
-
-<body>
+    section {
+        padding: 60px 0;
+    }
+}
 
     <!-- ==============================
          NAVIGATION
@@ -420,51 +459,72 @@
     </nav>
 
 
-    <!-- ==============================
-         HERO SECTION
-    ============================== -->
+   <!-- ==============================
+     HERO SECTION
+============================== -->
 
-    <section class="hero">
+<section class="hero">
 
-        <div class="container">
+    <div class="container">
 
-            <div class="hero-content">
+        <div class="hero-content">
 
-                <h1>Md Amanullah</h1>
+            <span class="hero-tag">
+                Open to Data Analyst Opportunities
+            </span>
 
-                <h2>Data Analyst</h2>
+            <h1>
+                Md Amanullah
+            </h1>
 
-                <p>
-                    I transform raw data into meaningful insights using
-                    SQL, Excel, Power BI, Python, and Tableau.
-                    I enjoy solving business problems through data analysis
-                    and visualization.
-                </p>
+            <h2>
+                Data Analyst
+            </h2>
 
-                <div class="buttons">
+            <div class="hero-subtitle">
+                Turning Data into Actionable Business Insights
+            </div>
 
-    <a href="#projects" class="btn btn-primary">
-        View My Projects
-    </a>
+            <p>
+                I analyze, visualize, and interpret data to help businesses
+                understand performance and make data-driven decisions.
+                Skilled in SQL, Excel, Power BI, Python, and Tableau.
+            </p>
 
-    <a href="resume.pdf"
-       target="_blank"
-       class="btn btn-secondary">
-        Download Resume
-    </a>
+            <div class="hero-highlights">
 
-    <a href="mailto:mdaman7781@gmail.com"
-       class="btn btn-secondary">
-        Contact Me
-    </a>
+                <span>SQL</span>
+                <span>Excel</span>
+                <span>Power BI</span>
+                <span>Python</span>
+                <span>Tableau</span>
 
-</div>
+            </div>
+
+            <div class="buttons">
+
+                <a href="#projects" class="btn btn-primary">
+                    View My Projects
+                </a>
+
+                <a href="resume.pdf"
+                   target="_blank"
+                   class="btn btn-secondary">
+                    Download Resume
+                </a>
+
+                <a href="mailto:mdaman7781@gmail.com"
+                   class="btn btn-secondary">
+                    Contact Me
+                </a>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
     <!-- ==============================

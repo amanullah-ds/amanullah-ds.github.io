@@ -226,21 +226,60 @@
         }
 
 
-        /* ==============================
-           ABOUT
-        ============================== */
+/* ==============================
+   ABOUT
+============================== */
 
-        .about-content {
-            max-width: 850px;
-            margin: auto;
-            text-align: center;
-        }
+.about {
+    background: #ffffff;
+}
 
-        .about-content p {
-            color: #4b5563;
-            font-size: 17px;
-            margin-bottom: 15px;
-        }
+.about-content {
+    max-width: 900px;
+    margin: auto;
+}
+
+.about-intro {
+    text-align: center;
+    font-size: 18px;
+    color: #374151;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.about-card {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.about-card h3 {
+    color: #2563eb;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.about-card p {
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
 
 
         /* ==============================
@@ -575,51 +614,70 @@
         </div>
 
     </section>
+<!-- ==============================
+     ABOUT
+============================== -->
 
+<section id="about" class="about">
 
-    <!-- ==============================
-         ABOUT
-    ============================== -->
+    <div class="container">
 
-    <section id="about">
+        <div class="section-title">
+            <h2>About Me</h2>
+            <p>Data Analyst focused on turning data into business insights.</p>
+        </div>
 
-        <div class="container">
+        <div class="about-content">
 
-            <div class="section-title">
+            <p class="about-intro">
+                I am a Computer Science and Engineering graduate with a strong
+                interest in Data Analytics and Business Intelligence. I enjoy
+                working with data to discover patterns, understand business
+                performance, and support data-driven decision-making.
+            </p>
 
-                <h2>About Me</h2>
+            <div class="about-grid">
 
-                <p>
-                    Data Analyst focused on turning data into decisions.
-                </p>
+                <div class="about-card">
 
-            </div>
+                    <h3>Analyze</h3>
 
-            <div class="about-content">
+                    <p>
+                        Clean and analyze data using SQL, Excel, Python,
+                        Pandas, and statistical techniques.
+                    </p>
 
-                <p>
-                    I am a Computer Science and Engineering graduate with
-                    a strong interest in Data Analytics and Business Intelligence.
-                </p>
+                </div>
 
-                <p>
-                    I work with SQL, Excel, Power BI, Python, Pandas, NumPy,
-                    Tableau, and statistics to clean, analyze, visualize,
-                    and interpret data.
-                </p>
+                <div class="about-card">
 
-                <p>
-                    My goal is to use data-driven insights to help businesses
-                    understand performance, identify opportunities, and make
-                    better decisions.
-                </p>
+                    <h3>Visualize</h3>
+
+                    <p>
+                        Create clear and interactive dashboards using
+                        Power BI, Tableau, and Excel.
+                    </p>
+
+                </div>
+
+                <div class="about-card">
+
+                    <h3>Deliver Insights</h3>
+
+                    <p>
+                        Translate analysis into meaningful business insights
+                        and actionable recommendations.
+                    </p>
+
+                </div>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
 
+</section>
 
     <!-- ==============================
          SKILLS

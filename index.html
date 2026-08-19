@@ -344,52 +344,94 @@
 }
 
 
-        /* ==============================
-           PROJECTS
-        ============================== */
+        
 
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
+        
+            /* ==============================
+               PROJECTS
+            ============================== */
 
-        .project-card {
-            background: white;
-            border-radius: 10px;
-            padding: 28px;
-            border: 1px solid #e5e7eb;
-            transition: 0.3s;
-        }
+.projects {
+    background: #ffffff;
+}
 
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-        }
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
 
-        .project-card h3 {
-            color: #111827;
-            margin-bottom: 12px;
-            font-size: 20px;
-        }
+.project-card {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 28px;
+    transition: 0.3s;
+}
 
-        .project-card .tools {
-            color: #2563eb;
-            font-size: 14px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border-color: #2563eb;
+}
 
-        .project-card p {
-            color: #4b5563;
-            font-size: 15px;
-            margin-bottom: 18px;
-        }
+.project-number {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
 
-        .project-link {
-            color: #2563eb;
-            font-weight: bold;
-        }
+.project-card h3 {
+    color: #111827;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.project-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 16px;
+}
+
+.project-tools span {
+    background: #dbeafe;
+    color: #2563eb;
+    padding: 5px 9px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.project-card p {
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.project-status {
+    color: #6b7280;
+    font-size: 13px;
+    font-style: italic;
+}
+
+@media (max-width: 900px) {
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
 
 
         /* ==============================
@@ -805,6 +847,134 @@
     </div>
 
 </section>
+
+
+    <!-- ==============================
+     PROJECTS
+============================== -->
+
+<section id="projects" class="projects">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Featured Projects</h2>
+
+            <p>
+                Data Analytics projects focused on solving real-world
+                business problems.
+            </p>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 01
+                </div>
+
+                <h3>
+                    End-to-End Sales Analytics
+                </h3>
+
+                <div class="project-tools">
+
+                    <span>Excel</span>
+                    <span>SQL</span>
+                    <span>Power BI</span>
+
+                </div>
+
+                <p>
+                    An end-to-end sales analytics project covering data
+                    cleaning, SQL analysis, KPI development, and interactive
+                    Power BI dashboard creation.
+                </p>
+
+                <div class="project-status">
+                    Project coming soon
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 02
+                </div>
+
+                <h3>
+                    HR Employee Attrition Analysis
+                </h3>
+
+                <div class="project-tools">
+
+                    <span>SQL</span>
+                    <span>Power BI</span>
+
+                </div>
+
+                <p>
+                    An HR analytics project focused on understanding employee
+                    attrition patterns, workforce KPIs, and factors associated
+                    with employee turnover.
+                </p>
+
+                <div class="project-status">
+                    Project coming soon
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 3 -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 03
+                </div>
+
+                <h3>
+                    Revenue & Sales Funnel Analysis
+                </h3>
+
+                <div class="project-tools">
+
+                    <span>SQL</span>
+                    <span>Power BI</span>
+
+                </div>
+
+                <p>
+                    A revenue and funnel analysis project designed to examine
+                    customer conversion, revenue performance, and drop-off
+                    across different stages of the sales funnel.
+                </p>
+
+                <div class="project-status">
+                    Project coming soon
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+    
     <!-- ==============================
          EXPERIENCE
     ============================== -->

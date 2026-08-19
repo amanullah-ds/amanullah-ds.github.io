@@ -1,1 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Md Amanullah | Data Analyst</title>
+
+    <meta name="description"
+          content="Md Amanullah - Data Analyst skilled in SQL, Excel, Power BI, Python and Tableau.">
+
+    <style>
+
+        /* ==============================
+           GLOBAL
+        ============================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #f8fafc;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* ==============================
+           NAVBAR
+        ============================== */
+
+        nav {
+            background: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #111827;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #374151;
+            font-size: 15px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        /* ==============================
+           HERO
+        ============================== */
+
+        .hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #eff6ff, #ffffff);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            color: #111827;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            color: #2563eb;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #4b5563;
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+        }
+
+        .btn-secondary {
+            border: 2px solid #2563eb;
+            color: #2563eb;
+            background: white;
+        }
+
+        .btn-secondary:hover {
+            background: #2563eb;
+            color: white;
+        }
+
+        /* ==============================
+           SECTIONS
+        ============================== */
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: #111827;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #6b7280;
+        }
+
+        /* ==============================
+           ABOUT
+        ============================== */
+
+        .about-content {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            color: #4b5563;
+            font-size: 17px;
+            margin-bottom: 15px;
+        }
+
+        /* ==============================
+           SKILLS
+        ============================== */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 18px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            border: 1px solid #e5e7eb;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: #2563eb;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .skill-card h3 {
+            color: #111827;
+            margin-bottom: 5px;
+        }
+
+        .skill-card p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        /* ==============================
+           PROJECTS
+        ============================== */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            padding: 28px;
+            border: 1px solid #e5e7eb;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .project-card h3 {
+            color: #111827;
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+
+        .project-card .tools {
+            color: #2563eb;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: #4b5563;
+            font-size: 15px;
+            margin-bottom: 18px;
+        }
+
+        .project-link {
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        /* ==============================
+           EXPERIENCE & EDUCATION
+        ============================== */
+
+        .timeline {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .timeline-item {
+            background: white;
+            border-left: 4px solid #2563eb;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .timeline-item h3 {
+            color: #111827;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item .company {
+            color: #2563eb;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .timeline-item p {
+            color: #4b5563;
+        }
+
+        /* ==============================
+           CONTACT
+        ============================== */
+
+        .contact-box {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 10px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .contact-box p {
+            color: #4b5563;
+            margin-bottom: 20px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        /* ==============================
+           FOOTER
+        ============================== */
+
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #d1d5db;
+        }
+
+        /* ==============================
+           MOBILE
+        ============================== */
+
+        @media (max-width: 700px) {
+
+            .nav-container {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .nav-links {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                min-height: 80vh;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 23px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ==============================
+         NAVIGATION
+    ============================== -->
+
+    <nav>
+        <div class="nav-container">
+
+            <div class="logo">
+                Md Amanullah
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <!-- ==============================
+         HERO SECTION
+    ============================== -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <h1>Md Amanullah</h1>
+
+                <h2>Data Analyst</h2>
+
+                <p>
+                    I transform raw data into meaningful insights using
+                    SQL, Excel, Power BI, Python, and Tableau.
+                    I enjoy solving business problems through data analysis
+                    and visualization.
+                </p>
+
+                <div class="buttons">
+
+                    <a href="#projects" class="btn btn-primary">
+                        View My Projects
+                    </a>
+
+                    <a href="mailto:mdaman7781@gmail.com"
+                       class="btn btn-secondary">
+                        Contact Me
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         ABOUT
+    ============================== -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>About Me</h2>
+                <p>Data Analyst focused on turning data into decisions.</p>
+            </div>
+
+            <div class="about-content">
+
+                <p>
+                    I am a Computer Science and Engineering graduate with
+                    a strong interest in Data Analytics and Business Intelligence.
+                </p>
+
+                <p>
+                    I work with SQL, Excel, Power BI, Python, Pandas, NumPy,
+                    Tableau, and statistics to clean, analyze, visualize,
+                    and interpret data.
+                </p>
+
+                <p>
+                    My goal is to use data-driven insights to help businesses
+                    understand performance, identify opportunities, and make
+                    better decisions.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         SKILLS
+    ============================== -->
+
+    <section id="skills">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Technical Skills</h2>
+
+                <p>
+                    Tools and technologies I use for data analysis.
+                </p>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <h3>SQL</h3>
+                    <p>MySQL, Joins, CTEs, Window Functions</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Excel</h3>
+                    <p>PivotTables, Data Cleaning, Analysis</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Power BI</h3>
+                    <p>Dashboards, KPIs, Data Visualization</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Python</h3>
+                    <p>Pandas, NumPy, Matplotlib, Seaborn</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Tableau</h3>
+                    <p>Data Visualization & Dashboards</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Statistics</h3>
+                    <p>Descriptive Statistics & Data Analysis</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Git & GitHub</h3>
+                    <p>Version Control & Project Management</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Data Cleaning</h3>
+                    <p>Missing Values, Duplicates & Transformation</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         PROJECTS
+    ============================== -->
+
+    <section id="projects">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Featured Projects</h2>
+
+                <p>
+                    Selected Data Analytics projects.
+                </p>
+
+            </div>
+
+
+            <div class="projects-grid">
+
+
+                <!-- PROJECT 1 -->
+
+                <div class="project-card">
+
+                    <h3>
+                        End-to-End Sales Analytics
+                    </h3>
+
+                    <div class="tools">
+                        Excel | SQL | Power BI
+                    </div>
+
+                    <p>
+                        Analyzed transactional sales data using Excel and SQL,
+                        performed data cleaning and transformation, and created
+                        an interactive Power BI dashboard to track sales,
+                        orders, products, customers, and regional performance.
+                    </p>
+
+                    <a href="https://github.com/amanullah-ds"
+                       target="_blank"
+                       class="project-link">
+                        View on GitHub →
+                    </a>
+
+                </div>
+
+
+                <!-- PROJECT 2 -->
+
+                <div class="project-card">
+
+                    <h3>
+                        HR Employee Attrition Analysis
+                    </h3>
+
+                    <div class="tools">
+                        SQL | Power BI
+                    </div>
+
+                    <p>
+                        Analyzed employee data to identify attrition patterns
+                        across departments, job roles, experience levels,
+                        and salary categories. Built a Power BI dashboard
+                        for HR performance analysis.
+                    </p>
+
+                    <a href="https://github.com/amanullah-ds"
+                       target="_blank"
+                       class="project-link">
+                        View on GitHub →
+                    </a>
+
+                </div>
+
+
+                <!-- PROJECT 3 -->
+
+                <div class="project-card">
+
+                    <h3>
+                        Revenue & Sales Funnel Analysis
+                    </h3>
+
+                    <div class="tools">
+                        SQL | Power BI
+                    </div>
+
+                    <p>
+                        Analyzed the customer journey from website visits
+                        to completed purchases. Used SQL to calculate
+                        revenue, conversion rates, and customer drop-offs
+                        and visualized the results using Power BI.
+                    </p>
+
+                    <a href="https://github.com/amanullah-ds"
+                       target="_blank"
+                       class="project-link">
+                        View on GitHub →
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         EXPERIENCE
+    ============================== -->
+
+    <section id="experience">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Experience</h2>
+
+                <p>
+                    My professional experience.
+                </p>
+
+            </div>
+
+
+            <div class="timeline">
+
+
+                <div class="timeline-item">
+
+                    <h3>Data Analytics Intern</h3>
+
+                    <div class="company">
+                        Ai Variant
+                    </div>
+
+                    <p>
+                        Worked on data cleaning, exploratory data analysis,
+                        SQL querying, Python-based data analysis, and
+                        data visualization to identify trends and insights.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <h3>Marketing Associate</h3>
+
+                    <div class="company">
+                        Faizary Pharma Private Limited
+                    </div>
+
+                    <p>
+                        Supported marketing activities and business operations
+                        involving customer, product, and market-related
+                        information.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         EDUCATION
+    ============================== -->
+
+    <section id="education">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Education & Certification</h2>
+
+            </div>
+
+
+            <div class="timeline">
+
+
+                <div class="timeline-item">
+
+                    <h3>
+                        B.Tech in Computer Science and Engineering
+                    </h3>
+
+                    <div class="company">
+                        Integral University, Lucknow | 2025
+                    </div>
+
+                    <p>
+                        CGPA: 7.8 / 10
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <h3>
+                        Data Science / Data Analytics Training
+                    </h3>
+
+                    <div class="company">
+                        ExcelR
+                    </div>
+
+                    <p>
+                        Training in Python, SQL, Statistics, Machine Learning,
+                        Excel, Tableau, Power BI, and Data Analytics.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         CONTACT
+    ============================== -->
+
+    <section id="contact">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Let's Connect</h2>
+
+                <p>
+                    Feel free to connect with me for Data Analyst opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="contact-box">
+
+                <p>
+                    I am open to Data Analyst and Data Analytics opportunities.
+                </p>
+
+                <div class="contact-links">
+
+                    <a href="mailto:mdaman7781@gmail.com">
+                        Email
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/amanullah-2002-ds"
+                       target="_blank">
+                        LinkedIn
+                    </a>
+
+                    <a href="https://github.com/amanullah-ds"
+                       target="_blank">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         FOOTER
+    ============================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Md Amanullah. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+</html>

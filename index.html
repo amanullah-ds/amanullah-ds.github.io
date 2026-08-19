@@ -343,9 +343,6 @@
 
 }
 
-
-        
-
         
             /* ==============================
                PROJECTS
@@ -432,7 +429,71 @@
     }
 
 }
+/* ==============================
+   EXPERIENCE
+============================== */
 
+.experience {
+    background: #ffffff;
+}
+
+.experience-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.experience-item {
+    position: relative;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    border-left: 4px solid #2563eb;
+    background: #f8fafc;
+    border-radius: 0 10px 10px 0;
+    transition: 0.3s;
+}
+
+.experience-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.experience-item h3 {
+    color: #111827;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.experience-company {
+    color: #2563eb;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.experience-duration {
+    color: #6b7280;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.experience-item p {
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+@media (max-width: 700px) {
+
+    .experience-container {
+        padding: 0 15px;
+    }
+
+    .experience-item {
+        padding: 20px;
+    }
+
+}
 
         /* ==============================
            EXPERIENCE & EDUCATION
@@ -851,7 +912,7 @@
 
     <!-- ==============================
      PROJECTS
-============================== -->
+    ============================== -->
 
 <section id="projects" class="projects">
 
@@ -975,71 +1036,54 @@
 
 </section>
     
-   /* ==============================
-   EXPERIENCE
-    ============================== */
+  <!-- ==============================
+     EXPERIENCE
+    ============================== -->
 
-.experience {
-    background: #ffffff;
-}
+<section id="experience" class="experience">
 
-.experience-container {
-    max-width: 900px;
-    margin: 0 auto;
-}
+    <div class="container">
 
-.experience-item {
-    position: relative;
-    padding: 25px 30px;
-    margin-bottom: 25px;
-    border-left: 4px solid #2563eb;
-    background: #f8fafc;
-    border-radius: 0 10px 10px 0;
-    transition: 0.3s;
-}
+        <div class="section-title">
 
-.experience-item:hover {
-    transform: translateX(5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-}
+            <h2>Experience</h2>
 
-.experience-item h3 {
-    color: #111827;
-    font-size: 20px;
-    margin-bottom: 8px;
-}
+            <p>
+                My professional experience and practical exposure
+                to data analytics.
+            </p>
 
-.experience-company {
-    color: #2563eb;
-    font-weight: 600;
-    font-size: 15px;
-    margin-bottom: 5px;
-}
+        </div>
 
-.experience-duration {
-    color: #6b7280;
-    font-size: 13px;
-    margin-bottom: 12px;
-}
 
-.experience-item p {
-    color: #6b7280;
-    font-size: 14px;
-    line-height: 1.7;
-    margin: 0;
-}
+        <div class="experience-container">
 
-@media (max-width: 700px) {
+            <div class="experience-item">
 
-    .experience-container {
-        padding: 0 15px;
-    }
+                <h3>Data Analytics Intern</h3>
 
-    .experience-item {
-        padding: 20px;
-    }
+                <div class="experience-company">
+                    Ai Variant
+                </div>
 
-}
+                <div class="experience-duration">
+                    6-Month Internship
+                </div>
+
+                <p>
+                    Worked on data cleaning, exploratory data analysis (EDA),
+                    SQL querying, Python-based data analysis, and data
+                    visualization. Analyzed datasets to identify trends,
+                    patterns, and actionable insights.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
     <!-- ==============================
          EDUCATION

@@ -975,55 +975,71 @@
 
 </section>
     
-    <!-- ==============================
-         EXPERIENCE
-    ============================== -->
+   /* ==============================
+   EXPERIENCE
+    ============================== */
 
-    <section id="experience">
+.experience {
+    background: #ffffff;
+}
 
-        <div class="container">
+.experience-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
 
-            <div class="section-title">
+.experience-item {
+    position: relative;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    border-left: 4px solid #2563eb;
+    background: #f8fafc;
+    border-radius: 0 10px 10px 0;
+    transition: 0.3s;
+}
 
-                <h2>Experience</h2>
+.experience-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
 
-                <p>
-                    My professional experience.
-                </p>
+.experience-item h3 {
+    color: #111827;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
 
-            </div>
+.experience-company {
+    color: #2563eb;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
 
-            <div class="timeline">
+.experience-duration {
+    color: #6b7280;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
 
+.experience-item p {
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
 
-                <div class="timeline-item">
+@media (max-width: 700px) {
 
-                    <h3>
-                        Data Analytics Intern
-                    </h3>
+    .experience-container {
+        padding: 0 15px;
+    }
 
-                    <div class="company">
-                        Ai Variant
-                    </div>
+    .experience-item {
+        padding: 20px;
+    }
 
-                    <p>
-                        Worked on data cleaning, exploratory data analysis,
-                        SQL querying, Python-based data analysis, and
-                        data visualization to identify trends and insights.
-                    </p>
-
-                </div>
-
-
-               
-
-
-            </div>
-
-        </div>
-
-    </section>
-
+}
 
     <!-- ==============================
          EDUCATION
